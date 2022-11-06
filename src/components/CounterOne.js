@@ -3,7 +3,7 @@ import useCounter from '../hooks/useCounter'
 export default function ReactCounter() {
 
 const {decrementCounter,incrementCounter,resetCounter, state} = useCounter() 
-const [inputValue, setValue] = useState("")
+// const [inputValue, setValue] = useState("")
 // const {incrementCounter, setValue} = useCounter()
   return (
     <div  className="container mt-3">
