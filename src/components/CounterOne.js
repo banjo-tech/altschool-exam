@@ -2,33 +2,28 @@ import React, { useState} from 'react';
 import useCounter from '../hooks/useCounter'
 export default function ReactCounter() {
 
-const {decrementCounter,incrementCounter,resetCounter, state} = useCounter() 
-// const [inputValue, setValue] = useState("")
-// const {incrementCounter, setValue} = useCounter()
+const {decrementCounter,incrementCounter,resetCounter, setValue, state} = useCounter() 
+const [inputValue, setInputValue] = useState("")
   return (
     <div  className="container mt-3">
           
     <div>
       <h2 className="mb-4"> Counter </h2>
-      {/* <form>
-   <label>
-   <h3 className="mb-4">  Enter a value:  </h3>
-    <br></br>
-    <input type="number" name="number" />
-   </label>
-  <input type="submit" value="Enter" />
-</form> */}
+     
 
 <br></br>
       <div>
         <h2>{state.count}</h2>
         <div>
-          {/* <label>Enter value</label>
+          <label>Enter value :</label>
+          <br></br>
           <input type = "number" onChange={(e) => setInputValue(e.target.value)}
           value = {inputValue}/>
-          <button onClick={() =>{setValue(inputValue) ;setInputValue(0)}}
-          > Set Value</button> */}
+          <button onClick={() =>{setValue(inputValue)
+           setInputValue(0)}}
+          > Set Value</button>
         </div>
+        <br></br>
         <button
           type="button"
           className="btn btn-danger"

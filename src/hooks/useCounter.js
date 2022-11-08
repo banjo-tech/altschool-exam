@@ -14,6 +14,8 @@ const reducerCounter = (state, action) => {
       return { count: state.count !== 0 ? state.count - 1 : (state.count = 0) }
       case reducerAction.reset:
       return { count:state.count = 0 }
+      case reducerAction.setValue:
+      return { count:state.count =Number(action.payload)} 
     default:
       throw new Error('Error occured in counter')
   }
