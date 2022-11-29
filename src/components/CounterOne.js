@@ -1,10 +1,17 @@
 import React, { useState} from 'react';
 import useCounter from '../hooks/useCounter'
+import{Container,Row, Col, Card} from "react-bootstrap"
 export default function ReactCounter() {
 
 const {decrementCounter,incrementCounter,resetCounter, setValue, state} = useCounter() 
 const [inputValue, setInputValue] = useState("")
   return (
+    <Container>
+      <Row>
+        <Col lg={6}>
+     <Card  style = {{backgroundColor:"#CE93D8"}}className='mt-5'>
+      <Card.Body>
+        <Card.Title>
     <div  className="container mt-3">
           
     <div>
@@ -50,5 +57,11 @@ const [inputValue, setInputValue] = useState("")
     </div>
    
     </div>
+    </Card.Title>
+    </Card.Body>
+    </Card>
+    </Col>
+    </Row>
+    </Container>
   )
 }
